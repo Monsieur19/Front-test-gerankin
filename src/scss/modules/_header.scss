@@ -1,0 +1,49 @@
+.header {
+    opacity: 0;
+
+    @media (max-width: $mobile-max) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &-nav {
+            margin: 0;
+            align-self: auto;
+        }
+    }
+}
+
+.headhesive {
+    position: fixed;
+
+    width: 100%;
+
+    transition: all .4s linear;
+    opacity: 1;
+    z-index: 1;
+
+    & svg {
+        transition: all .4s linear;
+    }
+
+    &--stick {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        & svg {
+            width: auto;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        &--stick {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            & svg {
+                height: 40px;
+            }
+        }
+    }
+}
